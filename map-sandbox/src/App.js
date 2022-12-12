@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import './App.css';
-import Location from "./Components/Location"
+import MapContainer from './Components/MapContainer';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       </div>
       <div className="col-3"></div>
       <div className="col-6">
-        <Location />
+        <MapContainer />
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@ import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import React, {useRef, useState} from "react";
 import usZips from 'us-zips';
 
-function Map() {
+export default function Location() {
     let [center, setCenter] = useState({lat: 38.0593, lng: -84.4921});
     const inputRef = useRef(null);
     function  handleClick() {
@@ -23,13 +23,4 @@ function Map() {
         </GoogleMap>
     </>
     ) 
-}
-
-export default function Location() {
-    const key = process.env.REACT_APP_MAP_API;
-    const { isLoaded } = useLoadScript({
-        googleMapsApiKey: key
-    })
-    if (!isLoaded) return <div>Loading</div>
-    return <div> <Map /> </div>
 }
